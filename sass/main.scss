@@ -1,0 +1,201 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  border: none;
+}
+td,
+th {
+  padding: 1px;
+}
+input {
+  padding: 0;
+  border: none;
+  background-color: #d9d9d9;
+  text-align: center;
+  border-radius: 6px;
+}
+.form-oder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 320px;
+  width: calc(100% * 0.8);
+  background-color: #84a278;
+  width: 320px;
+  border-radius: 24px;
+}
+
+.form-header {
+  font-weight: 400;
+  font-size: 34px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-left: 24px;
+}
+
+.cell-logo {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  & .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.cell-ice,
+.cell-coffee,
+.cell-milkshake {
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+  width: 75px;
+  height: 75px;
+}
+.cell-ice {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    display: block;
+    width: 75px;
+    height: 75px;
+    background-image: url("../image/ice-cream-mob-tab.png");
+
+    background-position: center;
+    background-size: cover;
+  }
+  &::after {
+    content: "$4.99";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    border-radius: 50%;
+    font-size: 15px;
+    transform: rotate(-15deg);
+    text-align: center;
+    line-height: 35px;
+    color: brown;
+    background-color: #aec6a5;
+
+    display: block;
+    width: 35px;
+    height: 35px;
+  }
+}
+.cell-coffee {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    display: block;
+    width: 75px;
+    height: 75px;
+    background-image: url("../image/coffee-mob-tab.png");
+
+    background-position: center;
+    background-size: cover;
+  }
+  &::after {
+    content: "$7.99";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    border-radius: 50%;
+    font-size: 15px;
+    transform: rotate(15deg);
+    text-align: center;
+    line-height: 35px;
+    color: brown;
+    background-color: #efd478;
+
+    display: block;
+    width: 35px;
+    height: 35px;
+  }
+}
+.cell-milkshake {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    display: block;
+    width: 75px;
+    height: 75px;
+    background-image: url("../image/milkshake-mob-tab.png");
+
+    background-position: center;
+    background-size: cover;
+  }
+  &::after {
+    content: "$9.99";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    border-radius: 50%;
+    font-size: 15px;
+    transform: rotate(-15deg);
+    text-align: center;
+    line-height: 35px;
+    color: brown;
+    background-color: #d6936d;
+
+    display: block;
+    width: 35px;
+    height: 35px;
+  }
+}
+.row-amount input,
+.row-sum input,
+.row-total input {
+  width: 75px;
+}
+.row-amount th,
+.row-sum th,
+.row-total th {
+  color: #ffffff;
+  text-align: right;
+}
+.oder_delivery {
+  display: block;
+  width: 280px;
+  height: 2.5em;
+  border-radius: 6px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+.oder__button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: none;
+  &:hover {cursor: pointer;}
+  &:active img {transform: scale(0.75);}
+}
+.is-hidden {display: none;}

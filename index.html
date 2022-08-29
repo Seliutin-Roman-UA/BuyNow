@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body>
+    <button class="open-button">ODER</button>
+
+    <form class="form-oder is-hidden">
+      <h2 class="form-header">Oder:</h2>
+
+      <table>
+        <tr class="fist__row">
+          <th>
+            <div class="cell-logo">
+              <img src="./image/logo.svg" alt="" class="logo" />
+            </div>
+          </th>
+
+          <th>
+            <div class="cell-ice">
+              <!-- <img src="./image/ice-cream-mob-tab.png" alt="" /> -->
+            </div>
+          </th>
+          <th>
+            <div class="cell-coffee">
+              <!-- <img src="./image/coffee-mob-tab.png" alt="" /> -->
+            </div>
+          </th>
+          <th>
+            <div class="cell-milkshake">
+              <!-- <img src="./image/milkshake-mob-tab.png" alt="" /> -->
+            </div>
+          </th>
+        </tr>
+        <tr class="row-amount">
+          <th>amount :</th>
+          <td><input type="number" name="amount" id="499" /></td>
+          <td><input type="number" name="amount" id="799" /></td>
+          <td><input type="number" name="amount" id="999" /></td>
+        </tr>
+        <tr class="row-sum">
+          <th>sum :</th>
+          <td><input type="number" name="amount" id="499x" readonly /></td>
+          <td><input type="number" name="amount" id="799x" readonly /></td>
+          <td><input type="number" name="amount" id="999x" readonly /></td>
+        </tr>
+        <tr class="row-total">
+          <th colspan="3">total sum :</th>
+          <td><input type="number" name="amount" id="total" readonly /></td>
+        </tr>
+      </table>
+      <textarea
+        class="oder_delivery"
+        name="oder_delivery"
+        rows="5"
+        placeholder="enter place of delivery.."
+      ></textarea>
+
+      <button class="oder__button">
+        <img src="./image/ice-truck.png" alt="" />
+      </button>
+    </form>
+    <script>
+      const q499 = document.getElementById("499");
+      const q799 = document.getElementById("799");
+      const q999 = document.getElementById("999");
+
+      const s499 = document.getElementById("499x");
+      const s799 = document.getElementById("799x");
+      const s999 = document.getElementById("999x");
+
+      const total = document.getElementById("total");
+
+      q499.addEventListener("input", () => {
+        console.log("amount = ", q499.value);
+        console.log("sum = ", 4.99 * q499.value);
+        s499.value = (4.99 * q499.value).toFixed(2);
+        total.value =
+          Number(s499.value) + Number(s799.value) + Number(s999.value);
+      });
+      q799.addEventListener("input", () => {
+        console.log("amount = ", q799.value);
+        console.log("sum = ", 7.99 * q799.value);
+        s799.value = (7.99 * q799.value).toFixed(2);
+        total.value =
+          Number(s499.value) + Number(s799.value) + Number(s999.value);
+      });
+      q999.addEventListener("input", () => {
+        console.log("amount = ", q999.value);
+        console.log("sum = ", 9.99 * q999.value);
+        s999.value = (9.99 * q999.value).toFixed(2);
+        total.value =
+          Number(s499.value) + Number(s799.value) + Number(s999.value);
+      });
+    </script>
+
+    <script>
+      document.querySelector(".oder__button").addEventListener("click", () => {
+        document.querySelector(".form-oder").className = "form-oder is-hidden";
+      });
+
+      document.querySelector(".open-button").addEventListener("click", () => {
+        document.querySelector(".form-oder").className = "form-oder";
+      });
+    </script>
+  </body>
+</html>
