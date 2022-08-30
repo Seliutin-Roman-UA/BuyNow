@@ -67,7 +67,7 @@ input {
   border-radius: 50%;
   border: 2px solid rgb(248, 210, 78);
   overflow: hidden;
-  background-color: transparent;
+  background-color: rgb(248, 210, 78);
   object-fit: cover;
   position: absolute;
   top: 20px;
@@ -78,6 +78,10 @@ input {
 }
 .oder-form__buton--close:active img {
   transform: scale(0.75);
+}
+
+.oder-form__buton--close img {
+  fill: #84a278;
 }
 
 .cell-logo {
