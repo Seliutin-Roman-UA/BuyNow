@@ -14,6 +14,9 @@
     <form class="form-oder is-hidden">
       <h2 class="form-header">Oder:</h2>
 
+      <button class="oder-form__buton--close">
+        <img src="./image/cancel.svg" alt="" />
+      </button>
       <table>
         <tr class="fist__row">
           <th>
@@ -104,6 +107,16 @@
       document.querySelector(".oder__button").addEventListener("click", () => {
         document.querySelector(".form-oder").className = "form-oder is-hidden";
       });
+
+      document.querySelector(".open-button").addEventListener("click", () => {
+        document.querySelector(".form-oder").className = "form-oder";
+      });
+      document
+        .querySelector(".oder-form__buton--close")
+        .addEventListener("click", () => {
+          document.querySelector(".form-oder").className =
+            "form-oder is-hidden";
+        });
 
       document.querySelector(".open-button").addEventListener("click", () => {
         document.querySelector(".form-oder").className = "form-oder";
